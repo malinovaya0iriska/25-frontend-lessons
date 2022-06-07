@@ -1,7 +1,3 @@
-// function foo (...args, otherFn) {};
-
-// function otherFn(error, value) {};
-
 function promisify(callback) {
   return function (...args) {
     return new Promise((resolve, reject) => {
