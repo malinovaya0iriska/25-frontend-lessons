@@ -1,0 +1,22 @@
+:root {
+  --body-background-color: #d6bb63;
+  --paragraph-background-color: #ffe4c4;
+  --text-color: #571717;
+  --text-block-border-color: #8624f7;
+}
+
+body {
+  background-color: var(--body-background-color);
+}
+
+h1 {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.testimonial {
+  background-color: var(--paragraph-background-color);
+  color: var(--text-color);
+  border: 2px solid var(--text-block-border-color);
+  padding: 10px;
+}
