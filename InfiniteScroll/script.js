@@ -6,7 +6,7 @@ let canFetchMore = true;
 
 const container = document.getElementById('container');
 
-container.addEventListener('scroll', handleScroll);
+container.addEventListener('mousewheel', handleScroll);
 
 fetchAndAppendTestimonials();
 
@@ -14,12 +14,14 @@ function handleScroll() {
   if (!canFetchMore) {
     return;
   }
+
   const bottomSpaceLeftToScroll =
     this.scrollHeight - this.scrollTop - this.clientHeight;
 
   if (bottomSpaceLeftToScroll > 0) {
     return;
   }
+
   fetchAndAppendTestimonials();
 }
 
@@ -30,29 +32,27 @@ async function fetchAndAppendTestimonials() {
 
   const { testimonials, hasNext } = await response.json();
 
-  // fetch(url)
-  //   .then((res) => res.json())
-  //   .then(({ testimonials, hasNext }) => {
-
   const fragment = document.createDocumentFragment();
   testimonials.forEach(({ message }) => {
     fragment.appendChild(createTestimonialElement(message));
   });
+
   container.appendChild(fragment);
 
   if (hasNext) {
     afterId = testimonials[testimonials.length - 1].id;
   } else {
-    container.removeEventListener('scroll', handleScroll);
+    container.removeEventListener('mousewheel', handleScroll);
   }
+
   canFetchMore = true;
-  // });
 }
 
 function createTestimonialElement(message) {
   const testimonialElement = document.createElement('p');
   testimonialElement.classList.add('testimonial');
   testimonialElement.textContent = message;
+
   return testimonialElement;
 }
 
@@ -61,7 +61,7 @@ function createTestimonialUrl() {
   url.searchParams.set('limit', PAGE_SIZE);
 
   if (afterId != null) {
-    url.searchParams.set('after', 6);
+    url.searchParams.set('after', afterId);
   }
 
   return url;
