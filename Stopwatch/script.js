@@ -1,3 +1,5 @@
+const INTERVAL_MS = 100 / 60;
+
 let timerID;
 let lastTimerStartTime = 0;
 let millisecPassedBeforeLastStart = 0;
@@ -18,7 +20,7 @@ function startTimer() {
 
   lastTimerStartTime = Date.now();
 
-  timerID = requestAnimationFrame(updateTimer);
+  timerID = setInterval(updateTimer, INTERVAL_MS); // requestAnimationFrame(updateTimer);
 }
 
 function stopTimer() {
@@ -28,7 +30,7 @@ function stopTimer() {
 
   millisecPassedBeforeLastStart += Date.now() - lastTimerStartTime;
 
-  cancelAnimationFrame(timerID);
+  clearInterval(timerID); // cancelAnimationFrame(timerID);
 }
 
 function resetTimer() {
@@ -50,7 +52,7 @@ function updateTimer() {
 
   timer.textContent = `${minutesText}:${secondsText}:${millisText}`;
 
-  timerID = requestAnimationFrame(updateTimer);
+  //  timerID = requestAnimationFrame(updateTimer);
 }
 
 function formatNumber(number, desiredDigitsNumber) {
