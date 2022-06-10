@@ -1,0 +1,48 @@
+:root {
+  --board-background: #5c0808;
+  --board-text-color: #f0dede;
+
+  --cell-background: #e05b0d;
+
+  --restart-btn-text-color: #f1da06;
+  --restart-btn-background-color: #2b6813;
+}
+
+#game-board {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  background-color: var(--board-background);
+  color: var(--board-text-color);
+  padding: 10px;
+}
+
+#game-board h1,
+#game-board h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.game-cell {
+  width: 30px;
+  height: 30px;
+  background-color: var(--cell-background);
+  color: #fff;
+}
+
+#restart-button {
+  display: none;
+  width: 45%;
+  padding: 10px;
+  color: var(--restart-btn-text-color);
+  background-color: var(--restart-btn-background-color);
+  margin: 0 auto;
+
+  font-weight: bold;
+  font-size: 16px;
+}
