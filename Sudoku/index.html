@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sudoku game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <table id="board" role="grid">
+        <tbody>
+          <tr>
+            <td class="given-number">5</td>
+            <td class="given-number">7</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">1</td>
+            <td class="given-number">8</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">3</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">8</td>
+            <td class="given-number">6</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">4</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">2</td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">9</td>
+            <td class="given-number">2</td>
+            <td class="given-number">6</td>
+            <td class="given-number">7</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">8</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">1</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">8</td>
+            <td class="given-number">6</td>
+            <td class="given-number">3</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">4</td>
+            <td class="given-number">7</td>
+          </tr>
+
+          <tr>
+            <td class="given-number">4</td>
+            <td class="given-number">2</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">1</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">7</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">2</td>
+
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">1</td>
+            <td class="given-number">9</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="given-number">7</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">3</td>
+            <td class="given-number">2</td>
+            <td class="given-number">9</td>
+            <td class="given-number">8</td>
+            <td class="given-number">5</td>
+            <td class="given-number">1</td>
+            <td class="given-number">6</td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">5</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">8</td>
+            <td class="given-number">4</td>
+          </tr>
+
+          <tr>
+            <td class="given-number">8</td>
+            <td class="given-number">5</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">7</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">6</td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td>
+              <span class="candidates"></span>
+              <span class="value"></span>
+            </td>
+            <td class="given-number">9</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div id="controls">
+        <div id="number-controls">
+          <button class="number-control">1</button>
+          <button class="number-control">2</button>
+          <button class="number-control">3</button>
+          <button class="number-control">4</button>
+          <button class="number-control">5</button>
+          <button class="number-control">6</button>
+          <button class="number-control">7</button>
+          <button class="number-control">8</button>
+          <button class="number-control">9</button>
+        </div>
+
+        <label>
+          Set Candidates
+          <input
+            id="candidate-switch"
+            type="checkbox"
+            aria-label="IS candidate move"
+        /></label>
+      </div>
+    </div>
+  </body>
+</html>

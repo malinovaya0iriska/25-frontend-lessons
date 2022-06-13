@@ -1,0 +1,63 @@
+:root {
+  --board-cell-size: 40px;
+  --board-cell-background-color: #969696;
+  --board-empty-cell-background-color: #e0dbdb;
+  --board-selected-cell-background-color: #548a4c;
+  --cell-border-color: rgb(46, 45, 45, 0.3);
+}
+
+#board {
+  border-spacing: 0;
+}
+
+td {
+  text-align: center;
+  width: var(--board-cell-size);
+  height: var(--board-cell-size);
+  background-color: var(--board-empty-cell-background-color);
+  border: 1px solid var(--cell-border-color);
+}
+
+#board td.given-number {
+  background-color: var(--board-cell-background-color);
+}
+
+#board td:nth-child(3n) {
+  border-right: 2px solid black;
+}
+
+td:first-child {
+  border-left: 2px solid black;
+}
+
+tr:first-child td {
+  border-top: 2px solid black;
+}
+tr:nth-child(3n) td {
+  border-bottom: 2px solid black;
+}
+
+.selected {
+  background-color: var(--board-selected-cell-background-color);
+}
+
+.candidates {
+  display: block;
+  font-size: 12px;
+}
+
+.value {
+  font-size: 18px;
+}
+
+#controls {
+  margin: 50px 50px;
+}
+
+#number-controls {
+  width: 140px;
+}
+
+.number-control {
+  margin: 4px;
+}
