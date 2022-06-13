@@ -1,2 +1,30 @@
 :root {
+  --main-heading: #7e14e0;
+  --wrapper-background: #ccc4c4;
+  --list-background: #e7be70;
+  --list-text-color: #ad230a;
+  --button-background: #ff927e;
+}
+
+#wrapper {
+  background: var(--wrapper-background);
+}
+
+#wrapper h1 {
+  color: var(--main-heading);
+}
+
+#todo-list li {
+  background: var(--list-background);
+  color: var(--list-text-color);
+  margin: 20px;
+}
+
+#todo-list li h2 {
+  display: inline;
+}
+
+#todo-list li button {
+  background-color: var(--button-background);
+  margin: 10px;
 }
