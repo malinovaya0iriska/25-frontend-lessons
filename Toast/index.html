@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toast</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="inputs">
+      <textarea
+        id="message-content"
+        placeholder="Message content ..."
+      ></textarea>
+
+      <div class="input">
+        <label for="duration">Duration</label>
+        <input id="duration" type="number" min="500" value="3000" />
+      </div>
+
+      <div class="input">
+        <label for="cancelable">Is Cancelable</label>
+        <input id="cancelable" type="checkbox" />
+      </div>
+
+      <div class="input">
+        <label for="success">Success</label>
+        <input id="success" type="radio" name="type" value="success" />
+
+        <label for="error">Error</label>
+        <input id="error" type="radio" name="type" value="error" />
+      </div>
+
+      <button id="add-button">Add toast</button>
+      <button id="clear-button">Clear toasts</button>
+    </div>
+
+    <div id="toasts"></div>
+  </body>
+</html>

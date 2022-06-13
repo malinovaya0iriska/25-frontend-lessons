@@ -1,0 +1,33 @@
+:root {
+  --toast-width: 90px;
+  --message-error-background-color: #ce1616;
+  --message-success-background-color: #178a43;
+}
+
+.toast {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: min-content;
+  min-width: var(--toast-width);
+  margin: 5px;
+  padding-left: 8px;
+  border-radius: 10px;
+}
+
+.error-toast {
+  background-color: var(--message-error-background-color);
+}
+
+.success-toast {
+  background-color: var(--message-success-background-color);
+}
+
+.cancel-button {
+  align-self: flex-start;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 4px 6px;
+}
