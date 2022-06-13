@@ -1,0 +1,37 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+#typeahead {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+#typeahead[type='text'] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+#suggestions-list {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  padding: 0 10px;
+  top: 12%;
+  left: 0;
+  right: 0;
+}
+#suggestions-list li {
+  list-style: none;
+  padding: 10px 0;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+#suggestions-list li:hover {
+  background-color: #e9e9e9;
+}
