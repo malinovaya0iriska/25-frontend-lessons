@@ -1,0 +1,35 @@
+:root {
+  --item-size: 20px;
+  --blue-item-background-color: #1f10eb;
+  --red-item-background-color: #e61109;
+  --green-item-background-color: #258807;
+}
+
+.drop-zone #blue {
+  background-color: var(--blue-item-background-color);
+  height: var(--item-size);
+  width: var(--item-size);
+}
+.drop-zone #red {
+  background-color: var(--red-item-background-color);
+  height: var(--item-size);
+  width: var(--item-size);
+}
+.drop-zone #green {
+  background-color: var(--green-item-background-color);
+  height: var(--item-size);
+  width: var(--item-size);
+}
+
+.drop-zone {
+  --drop-container-size: 40px;
+  min-height: var(--drop-container-size);
+  width: var(--drop-container-size);
+  border: 2px solid black;
+}
+
+.item {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px;
+}

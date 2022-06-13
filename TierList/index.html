@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tier list</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <section class='tier-section'> 
+        <h2>A Tier</h1>
+          <div class='drop-zone'></div>
+      </section>
+      <section class='tier-section'> 
+        <h2>B Tier</h1>
+          <div class='drop-zone'></div>
+      </section>
+      <section class='tier-section'> 
+        <h2>C Tier</h1>
+          <div class='drop-zone'></div>
+      </section>
+
+      <section class='tier-section' id='unranked-section'>
+        <h1>Unranked</h1>
+        <div class='drop-zone' id='unranked-drop-zone'>
+          <div draggable='true' id='blue' class='item'></div>
+          <div draggable='true' id='red' class='item'></div>
+          <div draggable='true' id='green' class='item'></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
